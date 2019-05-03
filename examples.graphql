@@ -1,0 +1,37 @@
+fragment userFields on User {
+  id
+  firstName
+  lastName
+  age
+}
+
+mutation saveJose {
+  saveUser(user: {
+    firstName: "José", 
+    lastName: "Bermúdez", 
+    age: 22
+  }){
+    id
+  }
+}
+
+mutation saveIvancho {
+  saveUser(user: {
+    firstName: "Ivan", 
+    lastName: "Molina", 
+  }){
+    id
+  }
+}
+
+query getJose{
+  findUser(userId: 1) {
+    ...userFields
+  }
+}
+
+query getIvancho{
+  findUser(userId: 2) {
+    ...userFields
+  }
+}

@@ -1,0 +1,54 @@
+{
+   "name": "api-graphql-example",
+   "version": "1.0.0",
+   "description": "Ejemplo de api usando Graphql",
+   "main": "src/index.js",
+   "scripts": {
+      "start": "npm run clean && nodemon",
+      "lint": "tsc --noEmit && tslint -c tslint.json './**/*.ts'",
+      "test": "jest",
+      "test:coverage": "jest --coverage",
+      "clean": "rm database.sqlite || true && rm ttracker.log || true"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/odin16/api-graphql-example.git"
+   },
+   "keywords": [
+      "API",
+      "GraphQl",
+      "TypeORM",
+      "TypeGraphql",
+      "typeDI",
+      "graphql-yoga"
+   ],
+   "author": "José Ángel Bermúdez Puello",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/odin16/api-graphql-example/issues"
+   },
+   "homepage": "https://github.com/odin16/api-graphql-example#readme",
+   "dependencies": {
+      "dotenv": "^8.0.0",
+      "graphql-yoga": "^1.17.4",
+      "reflect-metadata": "^0.1.13",
+      "sqlite3": "^4.0.6",
+      "type-graphql": "^0.17.3",
+      "typedi": "^0.8.0",
+      "typeorm": "^0.2.17",
+      "typeorm-typedi-extensions": "^0.2.3",
+      "winston": "^3.2.1"
+   },
+   "devDependencies": {
+      "@types/dotenv": "^6.1.1",
+      "@types/jest": "^24.0.12",
+      "@types/node": "^11.13.9",
+      "jest": "^24.7.1",
+      "nodemon": "^1.19.0",
+      "ts-jest": "^24.0.2",
+      "ts-node": "^8.1.0",
+      "tslint": "^5.16.0",
+      "tslint-config-airbnb": "^5.11.1",
+      "typescript": "^3.4.5"
+   }
+}
